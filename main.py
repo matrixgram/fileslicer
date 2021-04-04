@@ -3,7 +3,7 @@ import pandas
 import sys
 
 if __name__ == "__main__":
-    column = int(sys.argv[2])
-    excel = pandas.read_excel(sys.argv[1])
-    new_excel = excel.iloc[:, column]
-    new_excel.to_csv(sys.argv[3])
+    input_file, column_number, output_file = sys.argv[1], int(sys.argv[2]), sys.argv[3]
+    excel = pandas.read_excel(input_file)
+    new_excel = excel.iloc[:, column_number]
+    new_excel.to_csv(output_file)
