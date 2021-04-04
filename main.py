@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     excel = pandas.read_excel(input_file)
     new_excel = excel.iloc[:, column_number]
-    s = [i for i in range(0, len(new_excel), step)]
+    s = [new_excel[i] for i in range(0, len(new_excel), step)]
     with open(output_file, "w") as f:
         w = csv.writer(f)
         w.writerow(s)
