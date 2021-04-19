@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This is main file"""
+"""This is main file."""
 import csv
 import sys
 import pandas
