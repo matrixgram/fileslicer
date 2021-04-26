@@ -2,7 +2,15 @@
 """This is main file."""
 import csv
 import sys
-import pandas
+
+try:
+    import pandas
+except ImportError as error:
+    print(error)
+
+if sys.version_info.major == 3:
+    print("[!] Required python 3.x.x")
+    sys.exit(-1)
 
 if __name__ == "__main__":
     input_file, column_number, output_file, step = (
